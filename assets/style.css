@@ -10,12 +10,12 @@ header{
 .viewScores{
     justify-content: space-between;
     font-weight: bolder;
-    padding: 3;
+    padding: 3px;
 }
 
 .viewScores button{
     font-weight: bolder;
-    padding: 2;
+    padding: 2px;
     color: white;
     background-color: rgb(88, 17, 136);
     box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
@@ -77,14 +77,60 @@ header{
     margin-top: 46px;
 }
 
+.highscores{
+    display: none;
+    flex-direction: column;
+    margin: auto;
+    padding: 6px;
+    text-align: center;
+}
+
+.highscores h3{
+    margin: auto;
+    padding-bottom: 5px;
+}
+
+#returnButton{
+    color: white;
+    background-color: rgb(88, 17, 136);
+    margin-top: 6px;
+    padding-left: 6px;
+    padding-right: 6px;
+    font-size: 24px;
+    cursor: pointer;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+#clearButton{
+    color: white;
+    background-color: rgb(88, 17, 136);
+    margin-top: 6px;
+    padding-left: 6px;
+    padding-right: 6px;
+    font-size: 24px;
+    cursor: pointer;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.answerButtons{
+    color: white;
+    background-color: rgb(88, 17, 136);
+    margin-top: 6px;
+    padding-left: 6px;
+    padding-right: 6px;
+    font-size: 24px;
+    cursor: pointer;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
 .hiddenElement{
     display: none;
 }
 
 .answer{
-    width: 100%;
+    width: auto;
 }
 
 #QuestionTitle{
-    width: 100%;
+    width: auto;
 }

@@ -19,21 +19,32 @@
     <main class="container">
 
       <section class="start">
-        <h2 class="title">Coding Quiz Challenge</h2>
+        <h1 class="title">Coding Quiz Challenge</h1>
         <p>Try to answer the following code-related questions within the time limit. <br> Keep in mind that incorrect answers will penalize your score/time by ten seconds!</p>
         <button id="startButton">Start Quiz</button>
       </section>
 
-      <section class="questions">
-        <div class="hiddenElement" id="questionOne">
+      <section class="questions hiddenElement">
           <h2 id="QuestionTitle"></h2>
         <div id="QuestionAnswers"></div>
+        <div id="correctAnswer"></div>
+      </section>
+
+      <section class="finishQuiz">
+        <h2>All Done!</h2>
+        <p>Your final score is: <span id="score"></span></p>
+        <div class="scoreForm">
+          <h3>Enter Initials:</h3>
+          <input type="text" >
+          <button type="button" id="submitButton">Submit!</button>
         </div>
       </section>
 
-      <section>
-
-
+      <section class="highscores">
+          <h3>Highscores</h3>
+        <div id="highscoresList"></div>
+        <button type="button" id="returnButton">Go Back</button>
+        <button type="button" id="clearButton">Clear Highscores</button>
       </section>
 
     </main>
