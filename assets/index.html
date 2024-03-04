@@ -8,27 +8,35 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <div class="wrapper">
-      <header>
-        <h1></h1>
-      </header>
-      <div class="card">
-        <div class="card-header">
-          <h2>Generate a Password</h2>
-        </div>
-        <div class="card-body">
-          <textarea
-            readonly
-            id="password"
-            placeholder="Your Secure Password"
-            aria-label="Generated Password"
-          ></textarea>
-        </div>
-        <div class="card-footer">
-          <button id="generate" class="btn">Generate Password</button>
-        </div>
+
+    <header>
+      <div class="viewScores">
+        <button type="button">View Highscores</button>
       </div>
-    </div>
+      <div id="timeLeft">Time: <span id="count">0</span></div>
+    </header>
+
+    <main class="container">
+
+      <section class="start">
+        <h2 class="title">Coding Quiz Challenge</h2>
+        <p>Try to answer the following code-related questions within the time limit. <br> Keep in mind that incorrect answers will penalize your score/time by ten seconds!</p>
+        <button id="startButton">Start Quiz</button>
+      </section>
+
+      <section class="questions">
+        <div class="hiddenElement" id="questionOne">
+          <h2 id="QuestionTitle"></h2>
+        <div id="QuestionAnswers"></div>
+        </div>
+      </section>
+
+      <section>
+
+
+      </section>
+
+    </main>
     <script src="script.js"></script>
   </body>
 </html>
