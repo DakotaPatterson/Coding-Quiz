@@ -4,11 +4,12 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Codiing Quiz</title>
-    <link rel="stylesheet" href="style.css" />
+    <title>Coding Quiz</title>
+    <link rel="stylesheet" href="assets/style.css" />
   </head>
   <body>
 
+    <!-- header to show the highscores button and the timer -->
     <header>
       <div class="viewScores">
         <button type="button" id="highscoreButton">View Highscores</button>
@@ -18,18 +19,21 @@
 
     <main class="container">
 
+      <!-- section to show the start of the quiz page and the start button -->
       <section class="start">
         <h1 class="title">Coding Quiz Challenge</h1>
         <p>Try to answer the following code-related questions within the time limit. <br> Keep in mind that incorrect answers will penalize your score/time by ten seconds!</p>
         <button id="startButton">Start Quiz</button>
       </section>
 
+      <!-- section to show and hide questions -->
       <section class="questions hiddenElement">
           <h2 id="QuestionTitle"></h2>
         <div id="QuestionAnswers"></div>
         <div id="correctAnswer"></div>
       </section>
 
+      <!-- section to show the finish quiz page and have the form for initials -->
       <section class="finishQuiz hiddenElement">
         <h2>All Done!</h2>
         <p>Your final score is: <span id="score"></span></p>
@@ -40,6 +44,7 @@
         </div>
       </section>
 
+      <!-- section to show the highscore list page with the return and clear buttons-->
       <section class="highscores hiddenElement">
           <h3>Highscores</h3>
           <div id="highscoresList"></div>
@@ -48,6 +53,6 @@
       </section>
 
     </main>
-    <script src="script.js"></script>
+    <script src="assets/script.js"></script>
   </body>
 </html>

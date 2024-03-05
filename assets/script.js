@@ -204,6 +204,7 @@ returnButton.addEventListener("click", function () {
     highscoresList.classList.add("hiddenElement");
     mainScreen.classList.remove("hiddenElement");
     document.querySelector("header").classList.remove("hiddenElement");
+    timerDisplay.textContent = 0;
 });
 
 //This prompts the saved Highscores in the local storage to be loaded in upon loading the page.
