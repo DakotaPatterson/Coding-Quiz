@@ -7,11 +7,17 @@ var correctActiveAnswer= document.getElementById("correctAnswer");
 var timerDisplay= document.getElementById("count");
 var initialsInput = document.getElementById("initialsInput");
 var submitButton = document.getElementById("submitButton");
-var highscoresList = document.getElementById("highscores");
+var highscoresList = document.querySelector(".highscores");
+var returnButton = document.getElementById("returnButton");
+var clearButton = document.getElementById("clearButton");
+var highscoreButton = document.getElementById("highscoreButton");
+var savedScores = document.querySelector("#highscoresList");
 
 var count=0;
 var score=0;
 var index=0;
+
+var highscores=[];
 
 var quizQuestions= [
     {
@@ -45,7 +51,6 @@ var quizQuestions= [
     }
 ];
 
-var highscores=[];
 
 function displayQuestions(){
     activeQuestion.textContent = quizQuestions[index].question;
@@ -65,7 +70,6 @@ function displayQuestions(){
 
 function checkAnswer(userChoice) {
     if (userChoice === quizQuestions[index].choices[quizQuestions[index].answer]){
-        score++;
         correctActiveAnswer.textContent = "Correct!";
     } else {
         count -= 10;
@@ -84,7 +88,6 @@ function checkAnswer(userChoice) {
 //Once the start button is clicked the function start begins the quiz and resets the score and timer accoridnlgy.
 function start(){
     index= 0;
-    score= 0;
     count= 75;
 
     mainScreen.classList.add("hiddenElement");
@@ -113,7 +116,9 @@ function endGame(){
 
     correctActiveAnswer.textContent = "";
     activeQuestion.textContent = "Quiz Over";
-    activeAnswers.innerHTML = "Your Final Score is: " + score;
+    score = count;
+    var scoreDisplay = document.getElementById("score");
+    scoreDisplay.textContent = score;
 
     document.querySelector(".scoreForm").classList.remove("hiddenElement");
 }
@@ -124,6 +129,8 @@ function saveScore() {
     if (initials !== "") {
         var playerScore = { initials: initials, score: score };
         highscores.push(playerScore);
+        localStorage.setItem("highscores", JSON.stringify(highscores));
+        document.querySelector(".finishQuiz").classList.add("hiddenElement");
 
         // Sort highscores by score in descending order
         highscores.sort(function (a, b) {
@@ -138,12 +145,12 @@ function saveScore() {
 function displayHighscores() {
     highscoresList.classList.remove("hiddenElement");
 
-    highscoresList.innerHTML = "";
+    savedScores.innerHTML = "";
 
     for (var i = 0; i < highscores.length; i++) {
         var listItem = document.createElement("li");
         listItem.textContent = highscores[i].initials + ": " + highscores[i].score;
-        highscoresList.appendChild(listItem);
+        savedScores.appendChild(listItem);
     }
 }
 
@@ -151,3 +158,14 @@ function displayHighscores() {
 //Event listener for the start quiz button
 startButtonEl.addEventListener('click', start);
 submitButton.addEventListener("click", saveScore);
+highscoreButton.addEventListener("click", displayHighscores);
+
+clearButton.addEventListener("click", function () {
+    highscores = [];
+});
+
+
+returnButton.addEventListener("click", function () {
+    highscoresList.classList.add("hiddenElement");
+    mainScreen.classList.remove("hiddenElement");
+});

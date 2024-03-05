@@ -7,6 +7,10 @@ header{
     display: flex;
 }
 
+li{
+    
+}
+
 .viewScores{
     justify-content: space-between;
     font-weight: bolder;
@@ -90,15 +94,28 @@ header{
     margin-top: 46px;
 }
 
+#submitButton{
+    color: white;
+    background-color: rgb(88, 17, 136);
+    margin-top: 6px;
+    padding-left: 6px;
+    padding-right: 6px;
+    font-size: 24px;
+    cursor: pointer;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
 .highscores{
-    display: none;
+    display: flex;
     flex-direction: column;
     margin: auto;
     padding: 6px;
-    text-align: center;
+    text-align: left;
 }
 
 .highscores h3{
+    font-size: 50px;
+    color: black;
     margin: auto;
     padding-bottom: 5px;
 }
@@ -140,10 +157,3 @@ header{
     display: none;
 }
 
-.answer{
-    width: auto;
-}
-
-#QuestionTitle{
-    width: auto;
-}

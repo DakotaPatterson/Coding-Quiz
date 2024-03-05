@@ -11,7 +11,7 @@
 
     <header>
       <div class="viewScores">
-        <button type="button">View Highscores</button>
+        <button type="button" id="highscoreButton">View Highscores</button>
       </div>
       <div id="timeLeft">Time: <span id="count">0</span></div>
     </header>
@@ -41,11 +41,10 @@
       </section>
 
       <section class="highscores hiddenElement">
-        <div id="highscoresList">
           <h3>Highscores</h3>
+          <div id="highscoresList"></div>
           <button type="button" id="returnButton">Go Back</button>
           <button type="button" id="clearButton">Clear Highscores</button>
-        </div>
       </section>
 
     </main>
