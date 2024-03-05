@@ -76,6 +76,7 @@ function checkAnswer(userChoice) {
     if (userChoice === quizQuestions[index].choices[quizQuestions[index].answer]){
         correctActiveAnswer.innerHTML = "<hr class='horizontalLine'>Correct!";
     } else {
+        timerDisplay.textContent = count - 10;
         count -= 10;
         correctActiveAnswer.innerHTML = "<hr class='horizontalLine'>Wrong!";
     }

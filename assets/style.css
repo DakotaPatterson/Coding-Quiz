@@ -1,12 +1,13 @@
+/* Universial class that makes the entire page have a background color of aliceblue and the same font family. */
 *{
     background-color: aliceblue;
     font-family: "Times New Roman", Times, serif;
 }
-
+/* element selecter that displays the entire header with flex. */
 header{
     display: flex;
 }
-
+/* element selecter that makes all li elements displayed with numbers and with the same styling */
 li{
     list-style-type: decimal;
     color: white;
@@ -14,54 +15,8 @@ li{
     margin: 5px;
     padding-left: 2px;
 }
-
-.viewScores{
-    justify-content: space-between;
-    font-weight: bolder;
-    padding: 3px;
-}
-
-.viewScores button{
-    font-weight: bolder;
-    padding: 2px;
-    color: white;
-    background-color: rgb(88, 17, 136);
-    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
-    cursor: pointer;
-    font-size: 20px;
-}
-
-#timeLeft{
-    color: rgb(58, 54, 54);
-    position: fixed;
-    right: 20px;
-}
-
-.container{
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-}
-
-.start{
-    text-align: center;
-    position: relative;
-    top: 200px;
-}
-
-.title{
-    text-align: center;
-    font-size: 50px;
-    color: black;
-}
-
-.start p{
-    color: black;
-    margin-top: 5px;
-    font-size: 24px;
-}
-
-#startButton{
+/* Class that sets all buttons to have the same coloring and margin/padding when displayed.*/
+button{
     color: white;
     background-color: rgb(88, 17, 136);
     margin-top: 6px;
@@ -71,7 +26,49 @@ li{
     cursor: pointer;
     box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
 }
-
+/* Class that sets the view Highscores button to be displayed bold and on the left of the screen */
+.viewScores{
+    justify-content: space-between;
+    font-weight: bolder;
+    padding: 3px;
+}
+/* Class that sets the view highscores button to have a different padding and text size than the other buttons*/
+.viewScores button{
+    font-weight: bolder;
+    padding: 2px;
+    font-size: 20px;
+}
+/* ID that sets the timer to the right of the page with space for the edge */
+#timeLeft{
+    color: rgb(58, 54, 54);
+    position: fixed;
+    right: 20px;
+}
+/* Class that sets the container to have the whole main to be displayed flex and centered  */
+.container{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+/* Class that sets the start section to be displayed relative and in the center with distance from the top of 200px */
+.start{
+    text-align: center;
+    position: relative;
+    top: 200px;
+}
+/* Class that sets the title to be centered and have a font color of black and size of 50px. */
+.title{
+    text-align: center;
+    font-size: 50px;
+    color: black;
+}
+/* class that sets the paragraphs in the start class to have a margin for the top and a font size of 24px */
+.start p{
+    color: black;
+    margin-top: 5px;
+    font-size: 24px;
+}
+/* class that sets the questions to have a relative position and be displayed flex with columns and in the center */
 .questions{
     text-align: center;
     position: relative;
@@ -84,7 +81,7 @@ li{
     color: black;
     margin-top: 46px;
 }
-
+/* class that sets the finishQuiz section to be have a relative position and be displayed flex with columns and in the center */
 .finishQuiz{
     text-align: center;
     position: relative;
@@ -97,18 +94,7 @@ li{
     color: black;
     margin-top: 46px;
 }
-
-#submitButton{
-    color: white;
-    background-color: rgb(88, 17, 136);
-    margin-top: 6px;
-    padding-left: 6px;
-    padding-right: 6px;
-    font-size: 24px;
-    cursor: pointer;
-    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
-}
-
+/* class that sets the highscore section to have a auto margin and be displayed with text aligned to the left  */
 .highscores{
     display: flex;
     flex-direction: column;
@@ -116,41 +102,19 @@ li{
     padding: 6px;
     text-align: left;
 }
-
+/* class that sets the h3 tag in the highscore section to have a font size of 50px and a margin bottom of 5px */
 .highscores h3{
     font-size: 50px;
     color: black;
     margin: auto;
     padding-bottom: 5px;
 }
-
+/* class that sets the horizontalLine in the JavaScript to have a set margin on each side of it in the checkAnswer function */
 .horizontalLine{
     margin-left: 20%;
     margin-right: 20%;
 }
-
-#returnButton{
-    color: white;
-    background-color: rgb(88, 17, 136);
-    margin-top: 6px;
-    padding-left: 6px;
-    padding-right: 6px;
-    font-size: 24px;
-    cursor: pointer;
-    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
-}
-
-#clearButton{
-    color: white;
-    background-color: rgb(88, 17, 136);
-    margin-top: 6px;
-    padding-left: 6px;
-    padding-right: 6px;
-    font-size: 24px;
-    cursor: pointer;
-    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
-}
-
+/* class that sets the buttons that are created in the Javascript in the displayQuestion function to have a set styling and margin/padding once created. */
 .answerButtons{
     color: white;
     background-color: rgb(88, 17, 136);
@@ -164,6 +128,7 @@ li{
     box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
 }
 
+/*Used by the JavaScript to toggle element visibility*/
 .hiddenElement{
     display: none;
 }
