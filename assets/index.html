@@ -30,21 +30,22 @@
         <div id="correctAnswer"></div>
       </section>
 
-      <section class="finishQuiz">
+      <section class="finishQuiz hiddenElement">
         <h2>All Done!</h2>
         <p>Your final score is: <span id="score"></span></p>
         <div class="scoreForm">
           <h3>Enter Initials:</h3>
-          <input type="text" >
+          <input type="text" id="initialsInput">
           <button type="button" id="submitButton">Submit!</button>
         </div>
       </section>
 
-      <section class="highscores">
+      <section class="highscores hiddenElement">
+        <div id="highscoresList">
           <h3>Highscores</h3>
-        <div id="highscoresList"></div>
-        <button type="button" id="returnButton">Go Back</button>
-        <button type="button" id="clearButton">Clear Highscores</button>
+          <button type="button" id="returnButton">Go Back</button>
+          <button type="button" id="clearButton">Clear Highscores</button>
+        </div>
       </section>
 
     </main>

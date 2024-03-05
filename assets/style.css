@@ -65,12 +65,25 @@ header{
 }
 
 .questions{
+    text-align: center;
+    position: relative;
+    top: 200px;
     display: flex;
     justify-content: center;
     flex-direction: column;
+    font-size: 25px;
+    font-family: "Times New Roman", Times, serif;
+    color: black;
+    margin-top: 46px;
 }
 
-.questions p{
+.finishQuiz{
+    text-align: center;
+    position: relative;
+    top: 200px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
     font-size: 25px;
     font-family: "Times New Roman", Times, serif;
     color: black;
